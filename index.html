@@ -1,0 +1,66 @@
+<!DOCTYPE	html>
+<html	lang="en">
+<head>
+        <meta	charset="UTF-8">
+        <meta	name="viewport"	content="width=device-width,	initial-scale=1.0">
+        <link	rel="stylesheet"	href="style.css">
+        <link	rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"	integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="	crossorigin="anonymous"	referrerpolicy="no-referrer"	/>
+        <script	src="script.js"	defer></script>
+        
+        
+        <title>Password Generator</title>
+
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="pass | flex-group">
+            <div></div>
+            <i id ="copy" class="fa-solid fa-copy"></i>
+        </div>
+        <div class="pass-container">
+            <div class="pass-len | flex-group">
+                <p>Characters Length</p>
+                <h2>8</h2>
+            </div>
+            <input class="len" type="range" value="8" min="8" max="20" />
+            <form class="options">
+                <div class="option">
+                    <input type="checkbox" id="upper">
+                    <label for="upper">Include Uppercase Letters</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="lower">
+                    <label for="lower">Include Lowercase Letters</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+            </form>
+            <div class="strength | flex-group">
+                <h4>STRENGTH</h4>
+                <div>
+                    <div class="status-group">
+                        <span></span>
+                        <div> 
+                            <span class="status-bar"></span>
+                            <span class="status-bar"></span>
+                            <span class="status-bar"></span>
+                            <span class="status-bar"></span> </div>
+                    </div>  
+                </div>
+            </div>
+            <button class="btn">
+                Generate
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>

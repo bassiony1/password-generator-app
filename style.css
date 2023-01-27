@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli');
+* , *::after , *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*{
+    font-size: initial;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:hsl(250, 19%, 6%);
+    --secondary : hsl(248, 10%, 15%);
+    --accent : hsl(127, 100%, 82%);
+    --accent-100:hsl(171, 21%, 18%);
+    --neutral-200: hsl(253, 5%, 34%);
+    --neutral-100:white;
+    --neutral-800:hsl(45, 75%, 64%);
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    display: block;
+}
+ul {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Muli';
+    letter-spacing: 2px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-inline: 1rem;
+    max-width: 600px;
+    width: min(450px , 100%);
+}
+.container h1{
+    color: var(--neutral-200);
+    font-size: 18px;
+
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+.pass {
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 1rem;
+    color: var(--neutral-200);
+}
+.pass p {
+    font-size: 20px;
+    
+    animation: appear 1s linear forwards;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.pass i {
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 18px;
+}
+.pass i:hover{
+    color: white;
+}
+.pass-container{
+    padding: 1.5rem 2rem;
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.pass-len {
+  color: var(--neutral-100);  
+}
+.pass-len p {
+    font-size: 14px;
+}
+.pass-len h2 {
+    font-size: 22px;
+    color: var(--accent);
+}
+
+
+.pass-container .len {
+    accent-color: var(--accent);
+    background-color: var(--primary);
+
+}
+
+.options {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.option label {
+    color: white;
+}
+.option input {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    accent-color: var(--accent);
+    background-color: transparent;
+    cursor: pointer;
+    outline: 2px solid var(--neutral-100);
+    position: relative;
+}
+.option input:hover{
+    outline-color: var(--accent);
+}
+.option input:checked {
+    background-color: var(--accent);
+    outline-color: var(--accent);
+}
+
+.option input:checked::before{
+ position: absolute;   
+ content: '\f00c';
+ color: var(--primary);
+ inset: 0;
+ font-family: 'Font Awesome 5 Free';
+ display: flex;
+ font-weight: 900;
+ align-items: center;
+ justify-content: center;
+ font-size: 14px;
+}
+
+
+.strength {
+    padding: 1rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--neutral-200);
+}
+.strength > h4 {
+    font-size: 11px;
+}
+.strength > div .status-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.strength > div .status-group span {
+    font-size: 14px;
+    color: var(--neutral-100);
+}
+.strength > div .status-group div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+}
+.strength > div .status-group .status-bar {
+    display: block;
+    width: 7px;
+    height: 20px;
+    border: 1px solid var(--neutral-100);
+} 
+.strength > div .status-group .status-bar.active{
+    background-color: var(--neutral-800);
+    border: none;
+} 
+
+.btn {
+    background-color: var(--accent);
+    font-size: 12px;
+    border: 1px solid var(--accent);
+    color: var(--primary);
+    font-weight: 900;
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+}
+
+.btn::after {
+    content: '\f061';
+     font-family: 'Font Awesome 5 Free';
+     font-weight: 900;
+     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background-color: transparent;
+}
