@@ -27,7 +27,10 @@ generateBtn.addEventListener('click' , ()=>{
     document.querySelector('.pass div').innerHTML= `<p>${password}</p>`
 })
 copyBtn.addEventListener('click', ()=> {
+    if (password === '') return
     navigator.clipboard.writeText(password);
+    document.querySelector('.pass').classList.add('active')
+    setTimeout(()=>document.querySelector('.pass').classList.remove('active'), 2000)
 })
 input.addEventListener('change' , checkInput)
 

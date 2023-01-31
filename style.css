@@ -99,6 +99,9 @@ body {
         scale: 1;
     }
 }
+.pass.active p {
+    color: white;
+}
 .pass i {
     color: var(--accent);
     cursor: pointer;
